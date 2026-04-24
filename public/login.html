@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>账号登录</title>
+    <link rel="stylesheet" href="/css/login.css" />
+  </head>
+  <body>
+    <div class="login-layout">
+      <aside class="visual-panel">
+        <div class="visual-content">
+          <h1>MMXX平台</h1>
+          <ul class="feature-list">
+            <li><img src="https://www.figma.com/api/mcp/asset/6676217e-edad-46a8-b5a1-3a09f211070f" alt="" />协同</li>
+            <li><img src="https://www.figma.com/api/mcp/asset/6676217e-edad-46a8-b5a1-3a09f211070f" alt="" />合作伙伴</li>
+            <li><img src="https://www.figma.com/api/mcp/asset/6676217e-edad-46a8-b5a1-3a09f211070f" alt="" />高效</li>
+            <li><img src="https://www.figma.com/api/mcp/asset/6676217e-edad-46a8-b5a1-3a09f211070f" alt="" />合规</li>
+          </ul>
+        </div>
+        <div class="visual-illustration">
+          <img class="ring" src="https://www.figma.com/api/mcp/asset/c3db441f-1557-4adf-b790-f62e3ed57e03" alt="" />
+          <img class="main-illustration" src="https://www.figma.com/api/mcp/asset/d9b983d0-820d-4e99-a333-693cd6a154e3" alt="平台插画" />
+        </div>
+      </aside>
+
+      <main class="form-panel">
+        <header class="top-bar">
+          <div class="brand">
+            <img class="brand-logo" src="https://www.figma.com/api/mcp/asset/cd2beda3-3002-45d5-b095-0dcdd75fe999" alt="" />
+            <span class="brand-name">MM平台</span>
+          </div>
+          <nav class="top-links">
+            <a href="javascript:void(0)"><img src="https://www.figma.com/api/mcp/asset/6f9e7d2a-a9d8-42de-80fb-9a0e5be7e9b9" alt="" />廉正举报</a>
+            <a href="javascript:void(0)"><img src="https://www.figma.com/api/mcp/asset/fd42e3ca-8aed-48d4-baca-05a70a6a19b7" alt="" />帮助中心</a>
+          </nav>
+        </header>
+
+        <section class="login-card">
+          <h2>账号登录</h2>
+          <form id="loginForm" class="login-form">
+            <label class="field">
+              <span>账号</span>
+              <input id="usernameInput" name="username" type="text" placeholder="请输入账号" autocomplete="username" required />
+            </label>
+            <label class="field">
+              <span>密码</span>
+              <input id="passwordInput" name="password" type="password" placeholder="请输入密码" autocomplete="current-password" required />
+            </label>
+            <button id="loginBtn" class="btn btn-primary" type="submit">登 录</button>
+          </form>
+
+          <label class="agreement-line">
+            <input type="checkbox" />
+            <span>
+              已阅读并同意 <a href="javascript:void(0)">《MM账号服务条款》</a> 和
+              <a href="javascript:void(0)">《MM平台用户协议》</a> 和
+              <a href="javascript:void(0)">《MM平台隐私政策》</a>
+            </span>
+          </label>
+
+          <button id="createUserBtn" class="btn btn-secondary" type="button">生成测试账号</button>
+
+          <section id="accountPanel" class="account-panel hidden">
+            <p class="panel-title">已生成测试账号</p>
+            <div class="account-row">
+              <span>账号：<strong id="generatedUsername">-</strong></span>
+              <button data-copy="username" type="button">复制</button>
+            </div>
+            <div class="account-row">
+              <span>密码：<strong id="generatedPassword">-</strong></span>
+              <button data-copy="password" type="button">复制</button>
+            </div>
+          </section>
+
+          <p id="loginMessage" class="message hidden"></p>
+
+          <footer class="card-footer">
+            <a href="javascript:void(0)">忘记密码？</a>
+            <a href="javascript:void(0)">去注册</a>
+          </footer>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/js/login.js"></script>
+  </body>
+</html>

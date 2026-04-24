@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>后台首页</title>
+    <link rel="stylesheet" href="/css/dashboard.css" />
+  </head>
+  <body>
+    <header class="top-nav">
+      <div class="nav-logo">
+        <img src="https://www.figma.com/api/mcp/asset/75a21e8f-7e18-40f3-b31e-2a872b4d1207" alt="" />
+        <span>MM</span>
+      </div>
+
+      <div class="nav-search">
+        <img src="https://www.figma.com/api/mcp/asset/4c3ec37f-72e1-4056-8b00-04c0df50b6dc" alt="" />
+        <span>搜索常规采购、小喇叭/无供应商采购、比选 (Ctrl+K)</span>
+      </div>
+
+      <div class="nav-actions">
+        <button type="button"><img src="https://www.figma.com/api/mcp/asset/df2e7889-e2df-435c-9975-809a8d33745e" alt="" />任务</button>
+        <button type="button"><img src="https://www.figma.com/api/mcp/asset/abf27623-f8c9-4f79-b2ab-7759a636759b" alt="" />帮助</button>
+        <button type="button"><img src="https://www.figma.com/api/mcp/asset/81d85293-0d9e-41b7-b2f8-a271add236bd" alt="" />服务导航</button>
+        <button type="button" class="ai-btn"><img src="https://www.figma.com/api/mcp/asset/dd9a90d6-06b8-431e-bf06-f30761f50f66" alt="" />AI助手</button>
+        <span class="nav-divider"></span>
+        <div class="user-box">
+          <img class="avatar" src="https://www.figma.com/api/mcp/asset/076fbafa-7f9d-4767-9b66-ae918ec1cd4f" alt="" />
+          <img class="arrow" src="https://www.figma.com/api/mcp/asset/4a13751d-88c8-4e21-aef5-57858aab8a06" alt="" />
+        </div>
+        <button id="logoutBtnTop" class="logout-top" type="button">退出</button>
+      </div>
+    </header>
+
+    <div class="page-body">
+      <aside class="side-nav">
+        <button class="plus-btn" type="button">
+          <img src="https://www.figma.com/api/mcp/asset/4c5bdce4-aaf4-4b9b-8c5c-192162ba1bdf" alt="" />
+        </button>
+
+        <nav class="side-menu">
+          <a class="menu-item active" href="javascript:void(0)">
+            <img src="https://www.figma.com/api/mcp/asset/76cfa9c2-ed3c-4bbc-92d8-3fb21fd88f01" alt="" />
+            <span>工作台</span>
+          </a>
+          <a class="menu-item" href="javascript:void(0)">
+            <img src="https://www.figma.com/api/mcp/asset/35ee2606-01ab-4e49-a614-13e62addcd68" alt="" />
+            <span>营销采购</span>
+            <em class="badge">99+</em>
+          </a>
+          <a class="menu-item" href="javascript:void(0)">
+            <img src="https://www.figma.com/api/mcp/asset/61dcddc6-5b47-4034-9322-8a15241096d8" alt="" />
+            <span>供应商</span>
+          </a>
+          <a class="menu-item" href="javascript:void(0)">
+            <img src="https://www.figma.com/api/mcp/asset/1adfd246-9331-4126-b360-7d367fe27ca8" alt="" />
+            <span>发票池</span>
+          </a>
+          <a class="menu-item" href="javascript:void(0)">
+            <img src="https://www.figma.com/api/mcp/asset/a85b2f1f-31ae-482c-b75c-dfbde4e99704" alt="" />
+            <span>合同</span>
+          </a>
+          <a class="menu-item" href="javascript:void(0)">
+            <img src="https://www.figma.com/api/mcp/asset/8b4a00fa-81b5-49a3-98dc-f1cc847acd06" alt="" />
+            <span>报表</span>
+          </a>
+        </nav>
+
+        <div class="side-divider"></div>
+
+        <nav class="side-menu bottom">
+          <a class="menu-item" href="javascript:void(0)">
+            <img src="https://www.figma.com/api/mcp/asset/70c5a4bc-57c3-4ebe-889f-4b0bbb994198" alt="" />
+            <span>业务配置</span>
+          </a>
+          <a class="menu-item" href="javascript:void(0)">
+            <img src="https://www.figma.com/api/mcp/asset/5b933f3a-744a-4464-88f2-abd5ff64b7f8" alt="" />
+            <span>系统管理</span>
+          </a>
+        </nav>
+
+        <button id="logoutBtnSidebar" class="logout-sidebar" type="button">退出登录</button>
+        <button class="collapse-btn" type="button">
+          <img src="https://www.figma.com/api/mcp/asset/b0943150-e931-404d-8baf-26e293eb3a02" alt="" />
+        </button>
+      </aside>
+
+      <main class="workspace">
+        <section class="hero-card">
+          <div class="hero-title">
+            <img src="https://www.figma.com/api/mcp/asset/3561d76f-2498-4df9-9409-473b3b422577" alt="" />
+            <h1>MM Agent，你的智能工作助手</h1>
+          </div>
+
+          <p id="welcomeText" class="welcome">欢迎你，-</p>
+
+          <div class="prompt-box">
+            <div class="prompt-input">
+              <span class="prompt-caret">|</span>
+              <span class="prompt-text">下午好，我能帮您什么?</span>
+            </div>
+            <div class="prompt-toolbar">
+              <div class="left-tools">
+                <button class="tool-icon" type="button">
+                  <img src="https://www.figma.com/api/mcp/asset/7c5989a1-345a-4236-ab72-aaf7a2bfc8eb" alt="" />
+                </button>
+                <button class="tool-text" type="button">
+                  <img src="https://www.figma.com/api/mcp/asset/fd1a7ba2-1024-43b3-aa12-0d997b34eaf6" alt="" />
+                  <span>技能</span>
+                </button>
+              </div>
+              <div class="right-tools">
+                <button class="model-btn" type="button">
+                  <img src="https://www.figma.com/api/mcp/asset/2e08eea4-1b15-4d72-8a2d-8e8cec9679cf" alt="" />
+                  <span>Deepseek-V3.2</span>
+                  <img class="caret" src="https://www.figma.com/api/mcp/asset/f28b9de5-8ce8-47a4-a7a3-e40269c5aa72" alt="" />
+                </button>
+                <button class="send-btn" type="button">
+                  <img src="https://www.figma.com/api/mcp/asset/81aac519-9b66-4948-a07a-84994d24bc37" alt="" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="quick-actions">
+            <button type="button"><img src="https://www.figma.com/api/mcp/asset/4d836ac3-fa3e-4e3e-8953-ddce52e6b466" alt="" />定时建单</button>
+            <button type="button"><img src="https://www.figma.com/api/mcp/asset/fcb404de-19af-4c03-b38a-3a80daa2854b" alt="" />单据检索</button>
+            <button type="button"><img src="https://www.figma.com/api/mcp/asset/da6323a3-f2b9-4cfd-ba3d-e5fbc63085ba" alt="" />预算跟踪</button>
+            <button type="button"><img src="https://www.figma.com/api/mcp/asset/e45e075d-7f86-46b8-a2ae-5decfaebbef3" alt="" />知识问答</button>
+            <button type="button"><img src="https://www.figma.com/api/mcp/asset/ff18bccc-2c99-4712-b305-588006225bbc" alt="" />数据整理</button>
+          </div>
+        </section>
+
+        <section class="module-row">
+          <article class="module-card">
+            <header>
+              <h2><i></i>模块N</h2>
+              <button type="button"><img src="https://www.figma.com/api/mcp/asset/9bede596-3c99-4ab9-855e-d03b36ab8331" alt="" /></button>
+            </header>
+          </article>
+          <article class="module-card">
+            <header>
+              <h2><i></i>模块N</h2>
+              <button type="button"><img src="https://www.figma.com/api/mcp/asset/9bede596-3c99-4ab9-855e-d03b36ab8331" alt="" /></button>
+            </header>
+          </article>
+          <article class="module-card">
+            <header>
+              <h2><i></i>模块N</h2>
+              <button type="button"><img src="https://www.figma.com/api/mcp/asset/9bede596-3c99-4ab9-855e-d03b36ab8331" alt="" /></button>
+            </header>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="/js/dashboard.js"></script>
+  </body>
+</html>
